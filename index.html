@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+	<div id= "img"><img src="PicQuiz.jpg" alt="image quiz" width="580" ></div>
+	<div id="haut">
+		Quiz sur HTML-CSS-Javacript <br />
+		10 Questions
+	</div>
+	
+	 <!--    Section demarrer     -->
+	<div id="menu">
+        <button id="start">Démarrer le quiz</button>
+		<button id="addQ">Ajouter une qustion</button>
+	</div>
+
+		<!--    Section ajouter question    -->
+		<div id="ajouterQ">
+			<h2>Liste des qustions</h2>
+			
+			<div id= "listesQ">
+					<h4>question1: Que signifie HTML?</h4><br />
+					<h4>question2: Que signifie CSS?</h4><br />
+					<h4>question3: Quelle balise HTML est utiliée pour définir une feuille de style interne?</h4><br />
+					<h4>question4: Quelle est la syntaxe CSS correcte?</h4><br />
+					<h4>question5: Comment inséret un commentaire dans un fichier CSS?</h4><br />
+					<h4>question6: Comment inséret un commentaire dans un fichier HTML?</h4><br />
+					<h4>question7: Quelle propriété est utilisée pour changer la couleur d'arriere plan?</h4><br />
+					<h4>question8: Comment écrire une instruction IF en JavaScript?</h4><br />
+					<h4>question9: Dans quel élément HTML mettons_nous le JavaScript?</h4><br />
+					<h4>question10: Comment une boucle WHILE démarre-t-elle?
+			</div>
+			
+			<h2>Ajouter une qustion</h2>
+			
+			<div id="addQuestion" >
+				<form>
+				   <input type="text" id="ajouterQuestion" name="answer" placeholder="question...."><br>
+				   
+				   <input type='radio' id="reponseCorrect_1" name='reponsee' value="1" > 
+				   <input type="text" class="editReponse"  name="answer" placeholder="réponse 1...."><br>
+				   
+				   <input type='radio' id="reponseCorrect_2" name='reponsee' value="2" > 
+				   <input type="text" class="editReponse"  name="answer" placeholder="réponse 2...."><br>
+				   
+				   <input type='radio' id="reponseCorrect_3" name='reponsee' value="3" > 
+				   <input type="text" class="editReponse"  name="answer" placeholder="réponse 3...."><br>
+				   
+					<input type='radio' id="reponseCorrect_4" name='reponsee' value="4" > 
+					<input type="text" class="editReponse"  name="answer" placeholder="réponse 4...."><br>
+
+				</form> 
+			</div>
+			<div id="button1"> 
+                <button id="exit1">Sortir</button>
+				<button id="confirmer">Confirmer</button>
+            </div>
+		</div>
+
+        <!--    Section Guide    -->
+        <div id="guide">
+            <h2>Guide du quiz</h2>
+            <h4>1. Vous avez juste 10 secondes pour chaque question.</h4>
+            <h4>2. Une fois que vous avez sélectionné votre réponse, elle ne peut pas etre annulée.</h4>
+            <h4>3. Vous obtiendrez des boits sur la base de vos réponse correctes.</h4>
+            <h4>4. Vous ne pouvez pas quitter le quiz pendant que vous jouez.</h4>
+            <div id="button">
+                <button id="exit">Sortir</button>
+                <button id="continue">Continuer</button>
+            </div>
+        </div>
+
+        <!--    Section Quiz    -->
+        <div id="quiz">
+            <div id="quiz_header">
+                <h5><span>Q</span>UIZ</h5>
+                <div id="timer">
+                    <h6>Temps restant</h6>
+                    <h6 id="time">00</h6>
+                </div>
+            </div>
+
+            <!--     Questions de Quiz  -->
+
+            <div id="question">
+                <h2 id="questionNo"></h2>
+                <h2 id="questionText"></h2>
+            </div>
+
+            <!--       choix des qustion Quiz   -->
+
+            <div id="optionList">
+                <h4 class="choice_que" id="option1"></h4>
+                <h4 class="choice_que" id="option2"></h4>
+                <h4 class="choice_que" id="option3"></h4>
+                <h4 class="choice_que" id="option4"></h4>
+            </div>
+
+            <!--  Section réponses-->
+
+            <div id="answersSection">
+                <h3 id="total_correct">3 out  of 10 questions</h3>
+                <h3 id="next_question">Suivant</h3>
+            </div>
+        </div>
+        <!--   Section Resultat  -->
+        <div id="result">
+            <!-- <i class="fas fa-trophy"></i>  -->
+            <h6>Vous avez terminé le quiz</h6>
+            <h6 id="points">Votre score est de : 4 sur 10</h6>
+			<div>
+            <button id="quit">Quitter le Quiz</button>
+            <button id="startAgain">Recommencer</button>
+			</div>
+			<h5>
+				Merci d'avoir participé à ce Quiz.
+			</h5>
+        </div>
+    </div>
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
